@@ -24,7 +24,7 @@
             <div class="hamburger" id="hamburger">&#9776;</div>
         </div>
         <nav class="nav_links">
-            <a href="#" target="_self">Home</a>
+            <a href="#" target="_self" class="active">Home</a>
             <a href="#"target="_self">Chamber</a>
             <a href="#" target="_self">Github Profile</a>
             <a href="https://www.linkedin.com/in/nilo-urmeneta-718666118/" target="_blank">LinkedIn</a>
@@ -47,19 +47,12 @@
         <section class="card">
             <h2>Web and Computer Programming Certificate</h2>
             <div class="filter-buttons">
-                <button class="filter active">All</button>
-                <button class="filter">CSE</button>
-                <button class="filter">WDD</button>
+                <button onclick="filterCourses('All')" class="filter active" id="all-btn">All</button>
+                <button onclick="filterCourses('CSE')" class="filter" id="cse-btn">CSE</button>
+                <button onclick="filterCourses('WDD')" class="filter" id="wdd-btn">WDD</button>
             </div>
-
-            <div class="course-grid">
-                <div class="course done">CSE 110</div>
-                <div class="course done">WDD 130</div>
-                <div class="course done">CSE 111</div>
-                <div class="course done">CSE 210</div>
-                <div class="course done">WDD 131</div>
-                <div class="course">WDD 231</div>
-            </div>
+            <div id="totalCredits" class="total-credits">Total Credits: 0</div>
+            <div class="course-grid" id="courseGrid"></div>
         </section>
     </main>
     <footer>
