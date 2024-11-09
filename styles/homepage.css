@@ -189,6 +189,10 @@ footer {
     right: 4%;
   }
 
+  #hamburger::before {
+	content: "≡";
+}
+
   .show {
 	display: block;
   }
@@ -202,5 +206,10 @@ footer {
     background-color: var(--primary-color);
 
    }
+
+   #hamburger.show::before {
+	content: "X";
+    }
+
 
 }
