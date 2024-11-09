@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Home Page | Nilo Urmeneta</title>
+
+    <meta name="description" content="WDD 231 - Dynamic Web Fundamentals - Course Home Page">
+    <meta name="author" content="Nilo A. Urmeneta Jr.">
+
+    <link rel="stylesheet" href="styles/homepage.css">
+    <script src="scripts/homepage.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@100;400&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="profile">
+            <img src="images/Me.jpg" class="my_picture" alt="My Picture">
+            <h1>Nilo A. Urmeneta Jr.</h1> 
+            <div class="hamburger" id="hamburger">&#9776;</div>
+        </div>
+        <nav class="nav_links">
+            <a href="#" target="_self">Home</a>
+            <a href="#"target="_self">Chamber</a>
+            <a href="#" target="_self">Github Profile</a>
+            <a href="https://www.linkedin.com/in/nilo-urmeneta-718666118/" target="_blank">LinkedIn</a>
+        </nav>
+    </header>
+    <main>
+        <section class="card">
+            <h2>Course Work</h2>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </section>
+        <section class="card">
+            <h2>Leyte, Philippines</h2>
+            <img src="images/carigara_bay.jpg" class="carigara_bay" alt="Carigara Bay">
+            <p class="image_description">Carigara Bay</p>
+        </section>
+        <section class="card">
+            <h2>Web and Computer Programming Certificate</h2>
+            <div class="filter-buttons">
+                <button class="filter active">All</button>
+                <button class="filter">CSE</button>
+                <button class="filter">WDD</button>
+            </div>
+
+            <div class="course-grid">
+                <div class="course done">CSE 110</div>
+                <div class="course done">WDD 130</div>
+                <div class="course done">CSE 111</div>
+                <div class="course done">CSE 210</div>
+                <div class="course done">WDD 131</div>
+                <div class="course">WDD 231</div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© <span id="currentyear"></span> Nilo A. Urmeneta Jr. - Carigara, Leyte Philippines</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
