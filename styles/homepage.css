@@ -99,6 +99,7 @@ section:nth-child(3) {
 
 .carigara_bay {
     width: 100%;
+    max-width: 50em;
 }
 
 .image_description {
@@ -157,8 +158,8 @@ margin-bottom: 20px;
 .completed{
     background-color: var(--background-color);
     color: var(--text-color);
+    border-color: transparent;
 }
-  
 footer {
     text-align: center;
     padding: 1em;
@@ -210,6 +211,14 @@ footer {
    #hamburger.show::before {
 	content: "X";
     }
+}
 
-
+@media (max-width: 450px) {
+    .my_picture {
+        width: 15%;
+    }
+    
+    .profile h1 {
+        font-size: 1.5em;
+    }
 }
