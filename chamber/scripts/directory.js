@@ -10,10 +10,10 @@ async function getMemberData() {
         }
         members = await response.json();
         members.sort((a, b) => {
-            if (a.companyname < b.companyname) {
+            if (a.name < b.name) {
                 return -1;
             }
-            if (a.companyname > b.companyname) {
+            if (a.name > b.name) {
                 return 1;
             }
             return 0;
@@ -33,26 +33,23 @@ function displayMemberCards() {
     members.forEach((member, index) => {
         // create html elements
         const card = document.createElement('section');
-        const companyName = document.createElement('h2');
+        const name = document.createElement('h2');
         const image = document.createElement('img');
         const detailsDiv = document.createElement('div');
-        const ownerName  = document.createElement('p');
         const address = document.createElement('p');
         const phone = document.createElement('p');
         const urlP = document.createElement('p');
         const url = document.createElement('a');
 
         // set content / attributes
-        companyName.textContent = `${member.companyname}`;
+        name.textContent = `${member.name}`;
         card.setAttribute('class', 'card');
         image.setAttribute('src', `images/${member.img}`);
-        image.setAttribute('alt', `${member.companyname} Business Logo`);
-        ownerName.classList.add('bold');
-        ownerName.textContent = member.ownername
-        address.textContent = `${member.address.number} ${member.address.street}, ${member.address.area}, ${member.address.city}`;
-        phone.textContent = member.phone;
-        url.href = `http://${member.url}`;
-        url.textContent = member.url;
+        image.setAttribute('alt', `${member.name} Business Logo`);
+        address.textContent = `${member.address}`;
+        phone.textContent = member.phone_number;
+        url.href = `http://${member.website_url}`;
+        url.textContent = member.website_url;
         url.target = '_blank';
         // Only add lazy loading for images after the first one
         if (index !== 0) {
@@ -63,9 +60,8 @@ function displayMemberCards() {
         detailsDiv.setAttribute('class', 'details-div');
 
         // add name and img to card
-        card.appendChild(companyName);
+        card.appendChild(name);
         card.appendChild(image);
-        detailsDiv.appendChild(ownerName);
         detailsDiv.appendChild(address);
         detailsDiv.appendChild(phone);
         urlP.appendChild(url)
@@ -83,12 +79,10 @@ function displayMemberTable() {
     table.innerHTML = '';
     const tableHeaderRow = document.createElement('tr');
     const tableHeader1 = document.createElement('th');
-    const tableHeader2 = document.createElement('th');
     const tableHeader3 = document.createElement('th');
     const tableHeader4 = document.createElement('th');
     const tableHeader5 = document.createElement('th');
     tableHeader1.textContent = 'Company Name';
-    tableHeader2.textContent = 'Contact Name';
     tableHeader3.textContent = 'Address';
     tableHeader4.textContent = 'Phone Number';
     tableHeader5.textContent = 'Website';
@@ -102,23 +96,20 @@ function displayMemberTable() {
     members.forEach(member => {
         const tableRow = document.createElement('tr');
         const companyTd = document.createElement('td');
-        const ownerTd  = document.createElement('td');
         const addressTd = document.createElement('td');
         const phoneTd = document.createElement('td');
         const urlTd = document.createElement('td');
         const url = document.createElement('a');
         companyTd.classList.add('bold');
-        companyTd.textContent = member.companyname;
-        ownerTd.textContent = member.ownername
-        addressTd.textContent = `${member.address.number} ${member.address.street}, ${member.address.area}, ${member.address.city}`;
+        companyTd.textContent = member.name;
+        addressTd.textContent = `${member.address}`;
         phoneTd.textContent = member.phone;
         url.classList.add('url-table');
-        url.href = `http://${member.url}`;
-        url.textContent = member.url;
+        url.href = `http://${member.website_url}`;
+        url.textContent = member.website_url;
         url.target = '_blank';
         urlTd.appendChild(url);
         tableRow.appendChild(companyTd);
-        tableRow.appendChild(ownerTd);
         tableRow.appendChild(addressTd);
         tableRow.appendChild(phoneTd);
         tableRow.appendChild(urlTd);

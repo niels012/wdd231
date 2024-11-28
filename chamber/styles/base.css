@@ -1,8 +1,8 @@
 :root {
     /* fonts */
-    --font-heading: "Young Serif", serif;
-    --font-page: "Poppins", sans-serif;
-    --font-text: Georgia, 'Times New Roman', Times, serif;
+    --font-heading: "Righteous", serif;
+    --font-page: "Righteous", sans-serif;
+    --font-text: "Roboto", 'Times New Roman', Times, serif;
     /* colors */
     /* --background: white;
     --red: #a32002;
@@ -307,7 +307,7 @@ main {
 
 .card h2 {
     text-align: center;
-    background-color: black;
+    background-color: var(--primary-color);
     color: white;
     padding: 1rem;
     margin: 0;
@@ -514,8 +514,8 @@ figcaption {
 }
 
 button {
-    padding: 1rem;
-    background-color: var(--sun);
+    padding: .5rem;
+    background-color: white;
     color: white;
     margin: 1rem;
     border-radius: 10px;
@@ -527,6 +527,7 @@ button:hover {
     color: black;
     font-weight: 700;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .button-symbol {
@@ -537,12 +538,18 @@ button:hover {
 /* ----------------------------------------------  FOOTER  -------------------------------------------- */
 footer {
     grid-row: 3 / 4;
-    padding: 1rem;
+    padding: 2rem 10rem;
     margin-top: 1rem;
     text-align: center;
-    background-color: var(--teal);
+    background-color: var(--primary-color);
     color: white;
 }
+
+footer p {
+    padding-top: 5px;
+}
+
+
 
 .socials {
     max-width: 50px;
