@@ -1,0 +1,83 @@
+[
+    {
+      "name": "Chooks To Go",
+      "address": "Real Street, Carigara, Leyte",
+      "phone_number": "(053) 323-1234",
+      "website_url": "https://www.chookstogo.com.ph",
+      "image": "chooks_to_go_logo.png",
+      "membership_level": 1,
+      "business_type": "Restaurant",
+      "description": "A popular fast-food chain specializing in roasted chicken."
+    },
+    {
+      "name": "Carigara Bay Multi-Purpose Cooperative",
+      "address": "Del Rosario Street, Carigara, Leyte",
+      "phone_number": "(053) 323-5678",
+      "website_url": "https://ph311426-carigara-bay-multi-purpose-cooperative.contact.page/",
+      "image": "carigara_bay_mpc_logo.png",
+      "membership_level": 2,
+      "business_type": "Cooperative",
+      "description": "A cooperative offering various financial and business services to its members."
+    },
+    {
+      "name": "Samar Leyte Marketing",
+      "address": "Palo-Carigara-Ormoc City Road, Carigara, Leyte",
+      "phone_number": "(053) 323-4242",
+      "website_url": "https://ph688157-samar-leyte-marketing.contact.page/",
+      "image": "samar_leyte_marketing_logo.png",
+      "membership_level": 3,
+      "business_type": "Trading Company",
+      "description": "A trading company specializing in wholesale distribution of various products."
+    },
+    {
+      "name": "DTI Negosyo Center Carigara",
+      "address": "3rd Floor, LGU Conference Room, Carigara, Leyte",
+      "phone_number": "(053) 323-6789",
+      "website_url": "https://www.facebook.com/nccarigara/",
+      "image": "dti_negosyo_center_logo.png",
+      "membership_level": 1,
+      "business_type": "Government Agency",
+      "description": "The Department of Trade and Industry's center providing business assistance and support."
+    },
+    {
+      "name": "Perpetual Help Multi-Purpose Cooperative Tacloban",
+      "address": "Tacloban City, Leyte",
+      "phone_number": "(053) 321-2345",
+      "website_url": "https://www.facebook.com/PerpetualHelpMPC/",
+      "image": "perpetual_help_mpc_logo.png",
+      "membership_level": 2,
+      "business_type": "Cooperative",
+      "description": "A cooperative offering financial services and support to its members."
+    },
+    {
+      "name": "YOKS Printahann",
+      "address": "Jaro, Leyte",
+      "phone_number": "(053) 321-3456",
+      "website_url": "https://www.facebook.com/YOKSPrintahann/",
+      "image": "yoks_printahann_logo.png",
+      "membership_level": 3,
+      "business_type": "Printing Services",
+      "description": "A printing service provider offering various printing solutions."
+    },
+    {
+      "name": "Puregold Carigara",
+      "address": "National Highway, Carigara, Leyte",
+      "phone_number": "(053) 322-8901",
+      "website_url": "https://www.puregold.com.ph",
+      "image": "puregold_carigara_logo.png",
+      "membership_level": 2,
+      "business_type": "Retail",
+      "description": "A supermarket chain offering groceries, appliances, and more."
+    },
+    {
+      "name": "Carigara Shell Gas Station",
+      "address": "Real Street, Carigara, Leyte",
+      "phone_number": "(053) 322-9012",
+      "website_url": "https://www.shell.com.ph",
+      "image": "carigara_shell_logo.png",
+      "membership_level": 1,
+      "business_type": "Fuel Station",
+      "description": "A fuel station providing quality fuel and car care services."
+    }
+  ]
+  
