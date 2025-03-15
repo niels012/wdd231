@@ -84,9 +84,10 @@
     }
 
     th {
-        background-color: var(--teal);
+        background-color: red;
         color: white;
     }
+
 
     /* Hide cards or table depending on view selected (.hice class added in JS */
     #table-view.hide, #cards.hide {
@@ -102,6 +103,9 @@
         padding-left: 0.5rem;
         font-size: small;
     }
+
+
+
 }
 
 @media (min-width: 1211px) {
@@ -134,6 +138,7 @@
     #info {
         text-align: left;
     }
+
 }
 
 @media (min-width: 850px) {

@@ -374,8 +374,9 @@ main {
 
 /* --------------------------------------------------- TABLES --------------------------------------------------- */
 #table-view {
-    width: 100%;
+    width: 95%;
     border-collapse: collapse;
+    margin: 0 auto;
 }
 
 tr {
@@ -386,9 +387,9 @@ tr:nth-child(even) {
     background-color: white;
 }
 
-/* Style for even rows */
-tr:nth-child(even) {
-    background-color: var(--light-aqua);
+/* Style for odd rows */
+tr:nth-child(odd) {
+    background-color: lightgrey;
 }
 
 th, td {
