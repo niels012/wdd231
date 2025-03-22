@@ -50,25 +50,22 @@
         right: 80px;
     }
 
-    .cards-section {
+    .cards-section, #spotlight{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         align-items: stretch;
         margin-left: auto;
         margin-right: auto;
+
     }
 
-    #info-cards.cards-section {
+    #spotlight {
         display: grid;
-        grid-template-columns: 1.5fr 1.2fr 0.8fr;
         grid-column-gap: 0;
         align-items: stretch;
         width: 100%;
     }
 
-    #info-cards > .card {
-        max-width: 800px;
-    }
 
     #table-view {
         display: table;
@@ -78,7 +75,8 @@
         display: table-row;
     }
 
-    th, td {
+    th,
+    td {
         display: table-cell;
         text-align: left;
     }
@@ -90,7 +88,8 @@
 
 
     /* Hide cards or table depending on view selected (.hice class added in JS */
-    #table-view.hide, #cards.hide {
+    #table-view.hide,
+    #cards.hide {
         display: none !important;
     }
 
@@ -142,7 +141,9 @@
 }
 
 @media (min-width: 850px) {
-    #info p, #lastmodified {
+
+    #info p,
+    #lastmodified {
         font-size: 1rem;
     }
 }

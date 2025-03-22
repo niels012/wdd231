@@ -280,13 +280,13 @@ main {
 
 /* ---------------------------------------------------- CARDS -------------------------------------------------- */
 
-.cards-section {
+.cards-section{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#info-cards.cards-section, #spotlight {
+#spotlight {
     align-items: stretch;
     margin-left: auto;
     margin-right: auto;
