@@ -9,9 +9,9 @@ async function getMemberData() {
         const response = await fetch('./data/members.json');
         if (!response.ok) throw new Error('Could not fetch member data');
         
-        members = await response.json();
-        members.sort((a, b) => a.name.localeCompare(b.name));
-        
+        const data = await response.json();
+        members = data.members.sort((a, b) => a.name.localeCompare(b.name)); // Access the members array
+
         displayMemberCards(); // Default view
     } catch (error) {
         console.error("Encountered error during fetch:", error);
@@ -24,7 +24,7 @@ function displayMemberCards() {
     cards.classList.remove('hide');
     cards.innerHTML = '';
     
-    members.forEach((member, index) => {
+    members.forEach((member) => {
         const card = document.createElement('section');
         card.classList.add('card');
 
@@ -49,7 +49,7 @@ function displayMemberCards() {
 
         const urlP = document.createElement('p');
         const url = document.createElement('a');
-        url.href = `http://${member.website_url}`;
+        url.href = member.website_url.startsWith("http") ? member.website_url : `http://${member.website_url}`;
         url.textContent = member.website_url;
         url.target = '_blank';
         
@@ -93,7 +93,7 @@ function displayMemberTable() {
         const urlTd = document.createElement('td');
         const url = document.createElement('a');
         url.classList.add('url-table');
-        url.href = `http://${member.website_url}`;
+        url.href = member.website_url.startsWith("http") ? member.website_url : `http://${member.website_url}`;
         url.textContent = member.website_url;
         url.target = '_blank';
         urlTd.appendChild(url);

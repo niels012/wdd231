@@ -1,0 +1,48 @@
+#home-details {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    padding: 10px;
+}
+
+#home-details .card {
+    max-width: 100%;
+}
+
+#home-details div {
+    background-color: #eee;
+    padding: 5px;
+    margin: 7px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+#current-weather-description {
+    font-size: smaller;
+    font-style: oblique;
+
+}
+
+#forecast p , #current-temperature{
+    margin-top: 10%;
+}
+
+#spotlight {
+    display: flex;
+    align-content: space-between;
+}
+
+#spotlight section {
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px;
+}
+
+#spotlight a {
+    color: white;
+    text-decoration: none;
+}
+
+
