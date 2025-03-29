@@ -38,7 +38,7 @@
 }
 
 
-@media (max-width: 440px) {
+@media (max-width: 720px) {
     #home-details {
         grid-template-columns: 1fr 1fr;
     }    
