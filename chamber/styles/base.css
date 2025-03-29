@@ -354,9 +354,6 @@ main {
     font-size: 1.5rem;
 }
 
-.details-div {
-    padding: 1rem;
-}
 
 #spotlight-cards .card {
     background-color: white;
@@ -583,7 +580,5 @@ footer p {
     #heading {
         line-height: 35px;
     }
-    
-
-
 }
+

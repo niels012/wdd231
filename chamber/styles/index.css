@@ -38,3 +38,13 @@
 }
 
 
+@media (max-width: 376px) {
+    #home-details {
+        grid-template-columns: 1fr 1fr;
+    }    
+
+    .events {
+        grid-column: 1/3;
+    }
+
+}
