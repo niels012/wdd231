@@ -133,7 +133,7 @@ h3 {
     overflow: hidden;
     max-height: 0;
     opacity: 0;
-    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+    /* transition: max-height 0.5s ease-out, opacity 0.5s ease-out; */
     padding: .5em;
     gap: 1.5em;
 }
@@ -153,6 +153,7 @@ h3 {
     text-align: center;
     z-index: 2;
     cursor: pointer;
+    transition: all .5s ease 0s;
 }
 
 /* class toggled in JS */
@@ -165,7 +166,11 @@ h3 {
 .nav-bar a:hover {
     background-color: var(--primary-color);
     border-radius: 5px;
-    
+}
+
+.nav-bar .active {
+    color: red;
+    border: 1px solid black;
 }
 
 
