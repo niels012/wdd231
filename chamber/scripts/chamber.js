@@ -29,16 +29,16 @@ function changeActiveNav(activePhrase) {
     discButton.classList.remove('active');
 
     switch (activePhrase) {
-        case "Al Reem Chamber of Commerce Home":
+        case "Carigara Chamber of Commerce Home":
             homeButton.classList.add('active');
             break;
-        case "Al Reem Chamber of Commerce Directory":
+        case "Carigara Chamber of Commerce Directory":
             dirButton.classList.add('active');
             break;
-        case "Al Reem Chamber of Commerce Join":
+        case "Carigara Chamber of Commerce Join":
             joinButton.classList.add('active');
             break;
-        case "Al Reem Chamber of Commerce Discover":
+        case "Carigara Chamber of Commerce Discover":
             discButton.classList.add('active');
             break;
         default:

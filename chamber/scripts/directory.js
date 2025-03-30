@@ -111,16 +111,3 @@ tableButton.addEventListener('click', displayMemberTable);
 getMemberData();
 
 
-// Set active class on nav when the page is active
-
-const nav = document.querySelector(".nav-bar");
-const navLinks = nav.querySelectorAll("a");
-const currentURL = window.location.href;
-navLinks.forEach((link) => {
-if (link.href === currentURL) {
-    link.classList.add("active");
-}
-console.log(currentURL)
-console.log(link)
-
-});
