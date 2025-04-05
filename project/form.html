@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GCASH Form</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Dashboard</a>
+  </nav>
+  <main>
+    <h1>GCASH Transaction Form</h1>
+    <form id="gcashForm">
+      <input type="date" id="date" required />
+      <select id="type">
+        <option value="Cash In">Cash In</option>
+        <option value="Cash Out">Cash Out</option>
+      </select>
+      <input type="text" id="mobile" placeholder="Mobile Number" required />
+      <input type="number" id="amount" placeholder="Amount" required />
+      <input type="number" id="fee" placeholder="Fee (if any)" />
+      <input type="text" id="receiver" placeholder="Receiver/Sender" required />
+      <input type="text" id="reference" placeholder="Reference Number" required />
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+  <script src="scripts/form.js"></script>
+</body>
+</html>

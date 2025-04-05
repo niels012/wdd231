@@ -1,0 +1,21 @@
+[
+    {
+      "date": "2025-04-05",
+      "type": "Cash In",
+      "mobile": "09171234567",
+      "amount": "1500",
+      "fee": "0",
+      "receiver": "Juan Dela Cruz",
+      "reference": "TXN12345678"
+    },
+    {
+      "date": "2025-04-06",
+      "type": "Cash Out",
+      "mobile": "09179876543",
+      "amount": "500",
+      "fee": "10",
+      "receiver": "Ana Santos",
+      "reference": "TXN87654321"
+    }
+  ]
+  
