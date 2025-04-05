@@ -33,7 +33,7 @@
 }
 
 body {
-    background-color: var(--background);
+
     font-family: var(--font-page), sans-serif;
     
 }
@@ -136,6 +136,7 @@ h3 {
     /* transition: max-height 0.5s ease-out, opacity 0.5s ease-out; */
     padding: .5em;
     gap: 1.5em;
+    grid-column: 1/3 !important;
 }
 
 /* State when the nav-bar is open */
@@ -147,7 +148,7 @@ h3 {
 .nav-bar a {
     display: none;
     padding: .5em;
-    color: var(--text-color);
+    color: var(--text-color), white;
     font-family: var(--font-page), sans-serif;
     text-decoration: none;
     text-align: center;
@@ -389,7 +390,6 @@ td {
     padding: 0;
     margin: -1px;
     overflow: hidden;
-    clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
 }
@@ -490,7 +490,7 @@ figcaption {
     justify-content: center;
 }
 
-#ham-button, #grid-button, #table-button {
+#grid-button, #table-button {
     padding: .5rem;
     background-color: white;
     color: white;
@@ -564,15 +564,12 @@ footer p {
 
 @media (max-width: 720px) {
     #home-details {
-        grid-template-columns: 1fr 1fr;
+        display: grid;
+        grid-template-columns: 1fr 1fr !important;
         width: 100%;
     }    
 
     .events {
-        grid-column: 1/3;
-    }
-
-    .nav-bar.open {
         grid-column: 1/3;
     }
 

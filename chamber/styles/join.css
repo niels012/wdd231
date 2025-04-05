@@ -151,7 +151,7 @@ aside:hover {
 
 aside:hover button {
     transform: translate(-50%, 50%);
-    opacity: 100;
+    opacity: 1;
 }
 
 aside:hover #btnNP:hover {
