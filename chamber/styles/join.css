@@ -228,8 +228,14 @@ div h3 {
 }
 
 @media (max-width: 750px) {
+    main {
+        min-height: auto;
+    }
     .membership-card {
         display: block;
+    }
+    .card {
+        flex: 0;
     }
 
     .membership-levels {
