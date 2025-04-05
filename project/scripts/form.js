@@ -1,3 +1,19 @@
+const firebaseConfig = {
+    apiKey: "AIzaSyDrUJdge3bwGR4GKW4a1M4HE7IHze8Y2Ck",
+    authDomain: "gcash-tracker-f0ed6.firebaseapp.com",
+    projectId: "gcash-tracker-f0ed6",
+    storageBucket: "gcash-tracker-f0ed6.firebasestorage.app",
+    messagingSenderId: "273408188024",
+    appId: "1:273408188024:web:62edf9241bfe09e8a2178d"
+  };
+
+  // Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+// Get Firestore instance
+const db = firebase.firestore();
+
+
 document.getElementById('gcashForm').addEventListener('submit', function(e) {
     e.preventDefault();
   
