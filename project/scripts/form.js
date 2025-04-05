@@ -12,7 +12,7 @@ document.getElementById('gcashForm').addEventListener('submit', function(e) {
     };
   
     // Make sure to update this URL with your Vercel deployment URL
-    fetch('https://your-vercel-app.vercel.app/api/submit', {
+    fetch('https://project-61c4j9329-nilo-urmenetas-projects.vercel.app/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
