@@ -228,12 +228,15 @@ div h3 {
 }
 
 @media (max-width: 750px) {
+    .membership-card {
+        display: block;
+    }
+
     .membership-levels {
         display: block;
-        height: 0px !important;
-        padding-bottom: 20rem;
+        height: auto;
         margin: 0 auto;
-        width: 60%;
+        width: auto;
     }
 
     aside {
@@ -244,6 +247,7 @@ div h3 {
         display: flex;
         flex-wrap: wrap;
     }
+
 
 
     aside button {
