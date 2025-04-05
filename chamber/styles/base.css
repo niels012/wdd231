@@ -148,7 +148,7 @@ h3 {
 .nav-bar a {
     display: none;
     padding: .5em;
-    color: var(--text-color), white;
+    color: var(--text-color);
     font-family: var(--font-page), sans-serif;
     text-decoration: none;
     text-align: center;

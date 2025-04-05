@@ -80,7 +80,7 @@ aside button {
 aside {
     background: #f5f5f5;
     position: relative;
-    box-shadow: #919397;
+    box-shadow: 0 4px 10px #919397;
     transition: 0.55s ease-out;
     overflow: visible;
     margin: 0 20px;
