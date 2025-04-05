@@ -2,17 +2,17 @@ document.getElementById('gcashForm').addEventListener('submit', function(e) {
     e.preventDefault();
   
     const transaction = {
-      date: document.getElementById('date').value,
-      type: document.getElementById('type').value,
-      mobile: document.getElementById('mobile').value,
-      amount: document.getElementById('amount').value,
-      fee: document.getElementById('fee').value || '0',
-      receiver: document.getElementById('receiver').value,
-      reference: document.getElementById('reference').value
+      Date: document.getElementById('date').value,
+      Type: document.getElementById('type').value,
+      Mobile: document.getElementById('mobile').value,
+      Amount: document.getElementById('amount').value,
+      Fee: document.getElementById('fee').value || '0',
+      Receiver: document.getElementById('receiver').value,
+      Reference: document.getElementById('reference').value
     };
   
-    // Make sure to update this URL with your Vercel deployment URL
-    fetch('https://project-f06czy9hx-nilo-urmenetas-projects.vercel.app/api/submit', {
+    // Replace this URL with your actual Sheet.best API URL
+    fetch('https://api.sheetbest.com/sheets/966ece14-f512-4baf-b3fb-37375078de68', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -26,7 +26,7 @@ document.getElementById('gcashForm').addEventListener('submit', function(e) {
     })
     .catch(error => {
       console.error('Error submitting transaction:', error);
-      alert('Failed to save transactions.');
+      alert('Failed to save transaction.');
     });
   });
   
