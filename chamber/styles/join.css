@@ -9,8 +9,9 @@ main {
     padding: 20px;
 }
  .membership-card {
+    display: flex;
     max-width: 100% !important;
-    height: auto;
+    height: auto !important;
 }
 
 
@@ -226,11 +227,17 @@ div h3 {
     background-color: var(--secondary-color);
 }
 
-@media (max-width: 720px) {
+@media (max-width: 750px) {
     .membership-levels {
-        display: flex;
+        display: block;
         height: 0px !important;
-        padding: 0%;
+        padding-bottom: 20rem;
+        margin: 0 auto;
+        width: 60%;
+    }
+
+    aside {
+        margin-bottom:  3rem;
     }
 
     #membership-form {
