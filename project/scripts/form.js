@@ -23,24 +23,6 @@ document.getElementById('gcashForm').addEventListener('submit', function(e) {
       });
   });
 
-      // Import the functions you need from the SDKs you need
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
-      // TODO: Add SDKs for Firebase products that you want to use
-      // https://firebase.google.com/docs/web/setup#available-libraries
-    
-      // Your web app's Firebase configuration
-      const firebaseConfig = {
-        apiKey: "AIzaSyDrUJdge3bwGR4GKW4a1M4HE7IHze8Y2Ck",
-        authDomain: "gcash-tracker-f0ed6.firebaseapp.com",
-        projectId: "gcash-tracker-f0ed6",
-        storageBucket: "gcash-tracker-f0ed6.firebasestorage.app",
-        messagingSenderId: "273408188024",
-        appId: "1:273408188024:web:62edf9241bfe09e8a2178d"
-      };
-    
-      // Initialize Firebase
-      const app = initializeApp(firebaseConfig);
-  
 
 // document.getElementById('gcashForm').addEventListener('submit', function(e) {
 //     e.preventDefault();
