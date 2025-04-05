@@ -281,7 +281,6 @@ main {
     border: black 1px solid;
     margin: 1rem;
     max-width: 400px;
-    min-height: 300px;
     flex: 1;
 }
 
