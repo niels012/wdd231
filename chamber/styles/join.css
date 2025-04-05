@@ -1,0 +1,263 @@
+:root {
+    --np_level:black;      
+    --bronze_level: linear-gradient(45deg, #cd7f32, #a97142);
+    --silver_level: linear-gradient(45deg, #c0c0c0, #e6e8fa);
+    --gold_level: linear-gradient(45deg, #ffd700, #ffcc00, #daa520);
+}
+
+main {
+    padding: 20px;
+}
+ .membership-card {
+    max-width: 100% !important;
+    min-height: auto;
+}
+
+
+.membership-levels {
+    margin: 20px 20px 40px 20px;
+    display: flex;
+    justify-content: center;
+
+}
+/*
+.membership-levels aside {
+    margin: 0 20px;
+    border: solid 1px #444;
+    border-radius: 5px 20px;
+    padding: 30px;
+    background-color: #282c34;
+    text-align: center;
+    margin-bottom: .5rem;
+    animation: slideInLeft 1s ease-out forwards;
+
+}
+
+aside button {
+    margin-top: .5rem;
+}
+
+.membership-levels #card-np {    
+    background-color: white;
+    border: 5px solid black;
+}
+
+.membership-levels #card-bronze {
+    background-color: #f7f7f7;
+    border: 5px solid #dca570;
+}
+
+.membership-levels #card-silver {
+    background-color: #f0f0f0;
+    border: 5px solid silver;
+}
+
+.membership-levels #card-gold {
+    background-color: #fff9e6;
+    border: 5px solid gold;
+}
+
+.membership-levels aside:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.membership-levels aside:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.membership-levels aside:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.membership-levels aside:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.membership-levels aside:nth-child(5) {
+    animation-delay: 1s;
+} */
+
+aside {
+    background: #f5f5f5;
+    position: relative;
+    box-shadow: #919397;
+    transition: 0.55s ease-out;
+    overflow: visible;
+    margin: 0 20px;
+    padding: 3px; /* This is the border thickness */
+    border-radius: 12px; /* Optional: Rounded corners */
+}
+
+aside > * {
+    padding: 1.8rem;
+    border-radius: 12px;
+}
+
+
+#card-np h3 {
+    background: grey;
+}
+
+#card-bronze h3 {
+    background: var(--bronze_level);
+}
+#card-silver h3 {
+    background: var(--silver_level);
+}
+#card-gold h3 {
+    background: var(--gold_level);
+}
+
+
+/* .card-details {
+    color: red;
+    height: 100%;
+    gap: .5em;
+    display: grid;
+    place-content: center;
+} */
+
+aside button {
+    transform: translate(-50%, 125%);
+    width: 60%;
+    border-radius: 1rem;
+    color: #fff;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    opacity: 0;
+    transition: 0.3s ease-out;
+    border: 3px solid black;
+}
+
+
+#btnNP, #btnBronze, #btnSilver, #btnGold {
+    background-color: var(--np_level);
+}
+
+
+/*Hover*/
+aside:hover {
+    flex-grow: 1; 
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.50);
+    border: 2 px;
+}
+
+#card-np:hover {
+    border-color: var(--np_level);
+}
+
+aside:hover button {
+    transform: translate(-50%, 50%);
+    opacity: 100;
+}
+
+aside:hover #btnNP:hover {
+    color: grey;
+}
+aside:hover #btnBronze:hover {
+    color:  #c37b36;
+}
+aside:hover #btnSilver:hover {
+    color: #cecfd6;
+}
+aside:hover #btnGold:hover {
+    color: #fecb01;
+}
+
+/* --------------------- DIALOG ---------------------------------- */
+
+dialog {
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 3rem #777;
+    width: 95%;
+    max-width: 800px;
+    margin: auto;
+}
+
+dialog h3 {
+    margin-bottom: 10px;
+}
+
+dialog p {
+    margin-bottom: 10px;
+}
+
+dialog li {
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+
+::backdrop {
+    background-color: rgb(0 0 0 / 0.5);
+}
+
+dialog button {
+    position: absolute;
+    top: 8px;
+    right: 20px;
+    padding: .5rem 1rem;
+    border: 1px solid rgb(0 0 0 / 0.1);
+}
+
+/* --------------------- FORM ---------------------------------- */
+div h3 {
+    margin-bottom: 1rem;
+}
+
+#membership {
+    justify-content: center;
+    margin: 1rem;
+}
+
+#membership-form {
+    display: flex;
+    justify-content: space-around;
+}
+
+#membership label {
+    display: block;
+    font-size: .8rem;
+    color: #2c3e50;
+    padding-top: .2rem;
+}
+
+#membership  input:required {
+    border-left-width: 5px;
+    border-left-color: red;
+}
+
+#membership input[type=text],
+#membership input[type=tel],
+#membership input[type=date],
+#membership input[type=email],
+#membership textarea,
+#membership select {
+    display: block;
+    margin: .1rem 0 1rem 0;
+    padding: .5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 300px;
+}
+
+#membership input[type=submit] {
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: .5rem .75rem;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+#membership input[type=submit]:hover {
+    background-color: var(--secondary-color);
+}
+

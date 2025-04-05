@@ -490,7 +490,7 @@ figcaption {
     justify-content: center;
 }
 
-button {
+#ham-button, #grid-button, #table-button {
     padding: .5rem;
     background-color: white;
     color: white;
