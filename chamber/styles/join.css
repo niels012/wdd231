@@ -305,7 +305,24 @@ div h3 {
         animation-delay: .8s;
     }
 
- 
-    
+}
 
+@media (max-width: 370px) {
+
+    #membership input[type=text],
+    #membership input[type=tel],
+    #membership input[type=date],
+    #membership input[type=email],
+    #membership textarea,
+    #membership select {
+        width: 100%;
+    }
+
+    #membership-form {
+        display: block;
+    }
+
+    .owner-info, .business-info {
+        margin: 0 auto;
+    }
 }
