@@ -61,6 +61,11 @@ span{
     color: var(--button-hover);
 }
 
+.sitename {
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
 ol {
     margin-left: 3%;
 }
