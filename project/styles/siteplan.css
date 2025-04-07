@@ -1,0 +1,100 @@
+/* Reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-color: #c5c5c5;     /* Light Gray - for page background */
+    --primary-color: #2a6edc;        /* Strong Blue - nav, headers, key highlights */
+    --card-bg-color: #ffffff;        /* White - forms and cards */
+    --button-hover: #1d54b4;         /* Darker Blue - button hover feedback */
+    --text-color: #000000;           /* Black - default readable text */
+  }
+
+/* General body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    background: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+main {
+    width: 90%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: var(--card-bg-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
+}
+
+header {
+    max-width: 800px;
+    font-size: 1em;
+    background-color: var(--primary-color);
+    width: 90%;
+    border-radius: 0 0 10px 10px ;
+    padding: 10px 0;
+    text-align: center;
+}
+
+h1,h2 {
+    font-family: 'Righteous', sans-serif;
+    letter-spacing: 2px;
+}
+
+h2 {
+    border-bottom: 5px solid var(--button-hover);
+    width: 40%;
+    margin: 20px 0 5px 0;
+}
+
+span{
+    color: var(--button-hover);
+}
+
+ol {
+    margin-left: 3%;
+}
+
+.righteous {
+    font-family: 'Righteous', sans-serif;
+    font-size: 2em;
+}
+
+.roboto {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+}
+
+table {
+    border-spacing: 1em;
+}
+
+table tr:nth-child(3) td:nth-child(2) {
+    border: 1px solid black;
+}
+
+.color {
+    width: 25%;
+}
+
+.wireframeLarge {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.wireframeSmall {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
