@@ -1,0 +1,52 @@
+{
+    "places": [
+        {
+            "name": "Rizal Park",
+            "address": "Baybay, Carigara, Leyte, Philippines",
+            "description": "Rizal Park is a public park in Carigara. It features a prominent monument of Dr. Jose Rizal, the national hero of the Philippines. The park includes landscaped gardens, open green spaces, paved walkways, and benches for visitors. A stage or gazebo is present, used for community events and performances. Rizal Park serves as a central gathering place for residents, offering a space for relaxation, recreation, and community celebrations.",
+            "image": "images/rizal-park.webp"
+        },
+        {
+            "name": "Carigara Municipal Hall",
+            "address": "Baybay, Carigara, Leyte, Philippines",
+            "description": "The Carigara Municipal Hall houses the offices of the Local Government Unit (LGU) of Carigara. It is the center of local government operations and administration. Various departments and offices are located here, responsible for public services, local ordinances, and the overall management of the municipality. The Mayor and other elected officials have their offices in this building.",
+            "image": "images/lgu-carigara.webp"
+        },
+        {
+            "name": "Carigara Boulevard",
+            "address": "Baybay, Carigara, Leyte, Philippines",
+            "description": "Carigara Boulevard is a scenic coastal road in Carigara. It offers a place for walking, jogging, and enjoying sea views. It has benches, streetlights, and small parks. It is a popular gathering spot, especially in the evenings.",
+            "image": "images/boulevard.webp"
+        },
+        {
+            "name": "Holy Cross Parish Church",
+            "address": "Baybay, Carigara, Leyte, Philippines",
+            "description": "The Holy Cross Parish Church is a historic Roman Catholic church in Carigara. It is one of the oldest churches in Eastern Visayas and showcases Spanish colonial architecture. The church is a significant religious and cultural landmark, central to the community's spiritual life.",
+            "image": "images/holy-cross-parish.webp"
+        },
+        {
+            "name": "Carigara Fishing Port",
+            "address": "Baybay, Carigara, Leyte, Philippines",
+            "description": "The Carigara Fishing Port serves as a docking and landing area for local fishing boats. It is a hub of activity for the fishing community. Fishermen bring in their catch, repair their boats, and prepare for fishing trips. The port supports Carigara's fishing industry. Fishing boats of various sizes are present. The port has facilities for fish processing or a local fish market.",
+            "image": "images/carigara-port.webp"
+        },
+        {
+            "name": "Karigusan Beach Resort",
+            "address": "Nauguisan, Carigara, Leyte, Philippines",
+            "description": "Karigusan Beach Resort is a beachfront property in Carigara, Leyte. It offers accommodations and amenities for visitors seeking a relaxing beach getaway. The resort provides access to the beach, and likely features facilities such as cottages or rooms, a restaurant or dining area, and possibly recreational activities. It caters to tourists and locals looking to enjoy the coastal scenery and the waters of the area.",
+            "image": "images/karigusan.webp"
+        },
+        {
+            "name": "Cassidy Elementary School",
+            "address": "Baybay, Carigara, Leyte, Philippines",
+            "description": "Cassidy Elementary School is a public elementary school in Carigara, Leyte, providing primary education to local children. Established in 1911, it is named after Thomas Cassidy, one of the first American teachers assigned to Carigara. The school has a long history within the community and serves as an important institution for the development and education of young learners.",
+            "image": "images/cassidy.webp"
+        },
+        {
+            "name": "Carigara Baywalk",
+            "address": "Baybay, Carigara, Leyte, Philippines",
+            "description": "The Carigara Baywalk is a scenic promenade along Carigara Bay. It offers a place for locals and visitors to stroll, relax, and enjoy views of the bay. It is a popular spot for socializing, especially in the evenings. The Baywalk has streetlights. It contributes to the town's recreational spaces and provides a pleasant area to experience the coastal environment.",
+            "image": "images/baywalk.webp"
+        }
+    ]
+}

@@ -1,0 +1,112 @@
+
+aside {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-left: 5px solid #007bff;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#items-of-interest {
+    margin: 2rem;
+    display: grid;
+    gap: 1rem;
+}
+
+#items-of-interest section {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 0.02px solid #e6e6ec;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 0.80em;
+    background-color: #efeff7;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+#items-of-interest img {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 20px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+#items-of-interest section p {
+    text-align: left;
+    padding: 20px;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #004060;
+    background-color: #020000;
+    color: #c9cad3;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
+
+@media (min-width: 320px) {
+    #items-of-interest {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (min-width: 641px) {
+    #items-of-interest {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    #items-of-interest img:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    button:hover,
+    button:after {
+        background-color: var(--primary-color);
+        color: #d6c67e;
+        transition: 2ms;
+    }
+}
+
+@media (min-width: 1025px) {
+    #items-of-interest {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    #hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer {
+        display: grid;
+    }
+
+}
