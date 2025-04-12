@@ -1,7 +1,35 @@
+main {
+    text-align: center;
+}
 #totalCommission {
     margin-top: 5rem;
 }
 
 .card {
-    font-size: 3rem;
+    display: flex; justify-content: center; align-items: center; height: 200px;
+    font-size: 2rem;
+    height: 100px;
 }
+
+.card-grid {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+#COH {
+    margin-top: 0;
+}
+
+@media only screen and (max-width: 575px) {
+    /* html {
+      font-size: 46.87%;
+    } */
+    .card-grid {
+        margin-top: 3rem;
+        grid-template-columns: 1fr;
+        gap: 1em;
+    }
+
+  }

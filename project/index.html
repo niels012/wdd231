@@ -3,18 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WDD 231 - Nilo Urmeneta - Project Gcash Transaction Tracker">
+  <meta name="author" content="Nilo Urmeneta">
+  <!-- Social Media META Tags -->
+  <meta property="og:title" content="Gcash Transaction Tracker">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://niels012.github.io/wdd231/chamber/images/CCCLogoBig.webp">
+  <meta property="og:url" content="https://niels012.github.io/wdd231/chamber/directory">
+  
   <title>Dashboard</title>
   <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/dashboard.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
 
   <script src="scripts/dashboard.js" defer></script>
   <script src="scripts/nav.js" defer></script>
+
+  <!--FONTS-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@100;400&display=swap"
+      rel="stylesheet">
 </head>
 <body>
   <header>
     <nav>
-      <a href="index.html" id="logo">Site Logo</a>
+      <a href="index.html" id="logo">Site Logo</a>      
       <i class="fas fa-bars" id="ham-menu"></i>
       <ul id="nav-bar">
         <li>
@@ -32,9 +50,12 @@
 
   <main>
     <h1>GCASH Transaction Dashboard</h1>
-    <div class="card" id="wallet-bal">GCash Wallet Bal: ₱0</div>
-    <div class="card" id="COH">Cash on Hand: ₱0</div>
-    <div class="card" id="totalCommission">Total Commision: ₱0</div>
+    <div class="card-grid">
+      <div class="card" id="wallet-bal">GCash Wallet Bal: ₱0</div>
+      <div class="card" id="COH">Cash on Hand: ₱0</div>
+      <div class="card" id="totalCommission">Total Commision: ₱0</div>
+    </div>
+
   </main>
 
 </body>

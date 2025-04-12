@@ -1,41 +1,73 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
-    background: #f4f4f4;
+    background: var(--background-color);
     padding: 2rem;
   }
-  
+ 
+  :root {
+    --background-color: #c5c5c5;     /* Light Gray - for page background */
+    --primary-color: #2a6edc;        /* Strong Blue - nav, headers, key highlights */
+    --card-bg-color: #ffffff;        /* White - forms and cards */
+    --button-hover: #1d54b4;         /* Darker Blue - button hover feedback */
+    --text-color: #000000;           /* Black - default readable text */
+  }
+
   html {
     font-size: 62.5%;
   }
   *:not(i) {
-    font-family: "Poppins", sans-serif;
+    font-family:"Roboto", sans-serif;
   }
   header {
-    background-color: #2c8eec;
-    padding: 3rem 5rem;
+    background-color: var(--primary-color);
+    padding: 2rem 0 0 0;
+  }
+  h1 {
+    font-family: 'Righteous';
   }
   nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 3rem;
   }
   nav ul {
     list-style: none;
     display: flex;
     gap: 3rem;
-  }
-  nav a {
-    font-size: 1.8rem;
-    text-decoration: none;
-  }
-  nav a#logo {
-    color: #000000;
-    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0;
+
   }
 
-  #nav-bar .active {
-    color: red;
+  nav li a {
+    font-size: 1.8rem;
+    text-decoration: none;
+    padding: 1rem 1rem 3.1rem 1rem ;
+    width: 150px;
+    transition: 
+    background-color 0.5s ease,
+    border-radius 0.5s ease,
+    color 0.5s ease;
+
+  }
+  #logo { 
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: #000000;
+    font-weight: 700;
+    padding-left: 3rem;
+  }
+
+  #nav-bar {
+    padding-right: 3rem;
+  }
+
+  #nav-bar li a.active {
+    background-color: var(--background-color);
+    border-radius: 5px 5px 0 0;
+    color: #000000;
     font-weight: bold;
 }
 
@@ -43,26 +75,44 @@ body {
     color: #ffffff;
     font-weight: 600;
   }
+
   nav ul a:hover {
-    border-bottom: 2px solid #ffffff;
-  }
+    background-color: #ccc;
+    border-radius: 5px 5px 0 0;
+    color: #000000;
+    }
 
   h1 {
     font-size: 4rem;
   }
   #ham-menu {
     display: none;
+    font-size: 3rem;
+    cursor: pointer;
+    z-index: 999; /* Ensure it's on top */
   }
   nav ul.active {
     left: 0;
   }
+
+
+  /* appearance for the button when open class os on */
+#ham-button.open::before {
+  content: "x";
+}
+
+
+/* class toggled in JS */
+.active a {
+  display: block;
+  width: auto;
+}
+
   @media only screen and (max-width: 991px) {
     html {
       font-size: 56.25%;
     }
-    header {
-      padding: 2.2rem 5rem;
-    }
+
   }
   @media only screen and (max-width: 767px) {
     html {
@@ -71,44 +121,65 @@ body {
     #ham-menu {
       display: block;
       color: #ffffff;
+      padding-right: 3rem;
     }
     nav a#logo,
     #ham-menu {
       font-size: 3.2rem;
+      padding-top: 2rem;
     }
-    nav ul {
-      background-color: black;
-      position: fixed;
-      left: -100vw;
-      top: 73.6px;
-      width: 100vw;
-      height: calc(100vh - 73.6px);
+    header {
+      padding: 0;
+    }
+    header nav {
+      display: grid;
+      grid-template-columns: 80% auto;
+      grid-template-rows: auto auto;
+      padding-bottom: 2rem;
+
+    }
+
+    #nav-bar {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: space-around;
-      transition: 1s;
-      gap: 0;
+      font-weight: 500;
+      font-size: large;
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      transition: max-height 1s ease-out, opacity .5s ease-out;
+      grid-column: 1/3 !important;
+      text-align: center;
     }
+    
+    /* State when the nav-bar is open */
+    #nav-bar.active {
+      max-height: 400px;
+      opacity: 1;
+      margin-top: 2rem;
+      padding: 2rem 2rem;
+    }
+
+    nav ul li a.active {
+      padding: 1.5rem;
+    }
+
+    #nav-bar li a.active {
+      border-radius: 5px;
+    }
+
+    header nav.active{
+      padding-bottom: 0;
+    }
+
   }
   @media only screen and (max-width: 575px) {
     html {
       font-size: 46.87%;
     }
-    header {
-      padding: 2rem 3rem;
-    }
-    nav ul {
-      top: 65.18px;
-      height: calc(100vh - 65.18px);
-    }
+
   }
-  div {
-    background: #2a6edc;
-    padding: 1rem;
-    margin-bottom: 2rem;
-    text-align: center;
-  }
+
   
   div a {
     color: white;
@@ -164,4 +235,5 @@ body {
   .card + .card {
     margin-top: 1rem;
   }
+
   
