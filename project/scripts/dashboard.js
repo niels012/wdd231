@@ -25,8 +25,28 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
 
-      currentWallet = capitalWallet - totalOut;
-      currentCOH = capitalCOH - totalIn + totalFee;
+      currentCOH = capitalCOH + (totalIn-totalOut) + totalFee;
+      currentWallet = capitalWallet + (totalOut-totalIn);
+
+
+      // Get the latest transaction type based on the most recent timestamp
+      // const sortedData = [...data].sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+      // const latestEntry = sortedData[0];
+
+      // if (latestEntry && latestEntry.type) {
+      //   document.getElementById("latestType").textContent = `Latest Transaction Type: ${latestEntry.type}`;
+      //   if (latestEntry.type === "Cash In") {
+      //     currentCOH = capitalCOH + (totalIn-totalOut) ;
+      //     currentWallet = capitalWallet + (totalOut-totalIn);
+      //   } else if (latestEntry.type === "Cash Out") {
+      //     currentCOH = capitalCOH + (totalIn-totalOut)  ;
+      //     currentWallet = capitalWallet + (totalOut-totalIn);
+      //   }
+      // } else {
+      //   document.getElementById("latestType").textContent = "Latest Transaction Type: N/A";
+      // }
+
+
       // const balance = currentWallet + currentCOH;
 
       document.getElementById("wallet-bal").textContent = `GCash Wallet Bal: ₱${currentWallet.toLocaleString()}`;
