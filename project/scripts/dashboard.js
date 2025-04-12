@@ -16,63 +16,24 @@ document.addEventListener("DOMContentLoaded", () => {
         const amount = parseFloat(entry.amount || 0);
         const fee = parseFloat(entry.fee || 0);
 
-        if (entry.type === "Cash In") {
+        if (entry.type.toLowerCase() === "cash in") {
           totalIn += amount;
           totalFee += fee;
-        } else if (entry.type === "Cash Out") {
+        } else if (entry.type.toLowerCase() === "cash out") {
           totalOut += amount;
           totalFee += fee;
         }
       });
 
-      currentCOH = capitalCOH + (totalIn-totalOut) + totalFee;
-      currentWallet = capitalWallet + (totalOut-totalIn);
+      currentCOH = capitalCOH + (totalIn - totalOut) + totalFee;
+      currentWallet = capitalWallet + (totalOut - totalIn);
 
-
-      // Get the latest transaction type based on the most recent timestamp
-      // const sortedData = [...data].sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
-      // const latestEntry = sortedData[0];
-
-      // if (latestEntry && latestEntry.type) {
-      //   document.getElementById("latestType").textContent = `Latest Transaction Type: ${latestEntry.type}`;
-      //   if (latestEntry.type === "Cash In") {
-      //     currentCOH = capitalCOH + (totalIn-totalOut) ;
-      //     currentWallet = capitalWallet + (totalOut-totalIn);
-      //   } else if (latestEntry.type === "Cash Out") {
-      //     currentCOH = capitalCOH + (totalIn-totalOut)  ;
-      //     currentWallet = capitalWallet + (totalOut-totalIn);
-      //   }
-      // } else {
-      //   document.getElementById("latestType").textContent = "Latest Transaction Type: N/A";
-      // }
-
-
-      // const balance = currentWallet + currentCOH;
-
+      // Update UI
       document.getElementById("wallet-bal").textContent = `GCash Wallet Bal: ₱${currentWallet.toLocaleString()}`;
       document.getElementById("COH").textContent = `Cash on Hand: ₱${currentCOH.toLocaleString()}`;
-      document.getElementById("totalCommission").textContent = `Total Commision: ₱${totalFee.toLocaleString()}`;
-    })
-    .catch(error => {
-      console.error("Failed to fetch data:", error);
-    });
+      document.getElementById("totalCommission").textContent = `Total Commission: ₱${totalFee.toLocaleString()}`;
 
-
-// Show Graph
-
-fetch(SHEET_URL)
-    .then(res => res.json())
-    .then(data => {
-      let cashInTotal = 0;
-      let cashOutTotal = 0;
-
-      data.forEach(entry => {
-        const amount = parseFloat(entry.amount) || 0;
-        if (entry.type.toLowerCase() === "cash in") cashInTotal += amount;
-        if (entry.type.toLowerCase() === "cash out") cashOutTotal += amount;
-      });
-
-      // Draw chart
+      // Bar Chart
       const ctx = document.getElementById("transactionChart").getContext("2d");
       new Chart(ctx, {
         type: "bar",
@@ -80,8 +41,8 @@ fetch(SHEET_URL)
           labels: ["Cash In", "Cash Out"],
           datasets: [{
             label: "Total Amount",
-            data: [cashInTotal, cashOutTotal],
-            backgroundColor: ["#28a745", "#dc3545"] // green and red
+            data: [totalIn, totalOut],
+            backgroundColor: ["#28a745", "#dc3545"]
           }]
         },
         options: {
@@ -99,10 +60,30 @@ fetch(SHEET_URL)
           }
         }
       });
+
+      // Pie Chart
+      const pieCtx = document.getElementById("balanceChart").getContext("2d");
+      new Chart(pieCtx, {
+        type: "pie",
+        data: {
+          labels: ["Cash on Hand", "GCash Wallet"],
+          datasets: [{
+            data: [currentCOH, currentWallet],
+            backgroundColor: ["#007bff", "#17a2b8"]
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            title: {
+              display: true,
+              text: "Current Balance Breakdown"
+            }
+          }
+        }
+      });
     })
-    .catch(err => console.error("Error loading data:", err));
-  });
-
-
-
-
+    .catch(error => {
+      console.error("Failed to fetch data:", error);
+    });
+});

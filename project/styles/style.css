@@ -2,9 +2,11 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     background: var(--background-color);
-    padding: 2rem;
   }
  
+  main {
+    padding: 0 2rem 2rem 2rem;
+  }
   :root {
     --background-color: #c5c5c5;     /* Light Gray - for page background */
     --primary-color: #2a6edc;        /* Strong Blue - nav, headers, key highlights */
@@ -14,7 +16,7 @@ body {
   }
 
   html {
-    font-size: 62.5%;
+    font-size: 75%;
   }
   *:not(i) {
     font-family:"Roboto", sans-serif;
@@ -23,9 +25,11 @@ body {
     background-color: var(--primary-color);
     padding: 2rem 0 0 0;
   }
+
   h1 {
     font-family: 'Righteous';
   }
+
   nav {
     display: flex;
     justify-content: space-between;
@@ -230,6 +234,7 @@ body {
     font-size: 1.2rem;
     text-align: center;
     padding: 1.5rem;
+    max-width: auto;
   }
   
   .card + .card {
