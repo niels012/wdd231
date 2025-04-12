@@ -1,0 +1,29 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    font-family: sans-serif;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  th {
+    background-color: #007BFF; /* Bootstrap blue */
+    color: white;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  td {
+    padding: 10px;
+    border-top: 1px solid #ccc;
+  }
+  
+  /* Alternate row colors */
+  tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  body {
+    font-size: 2rem;
+  }
+  
