@@ -3,21 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GCASH Dashboard</title>
+  <title>Dashboard</title>
   <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/dashboard.css">
+
+  <script src="scripts/dashboard.js" defer></script>
+  <script src="scripts/nav.js" defer></script>
 </head>
 <body>
-  <nav>
-    <a href="form.html">Transaction Form</a>
-  </nav>
+  <header>
+    <nav>
+      <a href="index.html" id="logo">Site Logo</a>
+      <i class="fas fa-bars" id="ham-menu"></i>
+      <ul id="nav-bar">
+        <li>
+          <a href="index.html" data-name="Dashboard">Dashboard</a>
+        </li>
+        <li>
+          <a href="transaction.html" data-name="Transactions">Transactions</a>
+        </li>
+        <li>
+          <a href="form.html" data-name="Form">Form</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
   <main>
     <h1>GCASH Transaction Dashboard</h1>
     <div class="card" id="wallet-bal">GCash Wallet Bal: ₱0</div>
     <div class="card" id="COH">Cash on Hand: ₱0</div>
     <div class="card" id="totalCommission">Total Commision: ₱0</div>
   </main>
-  <script src="scripts/dashboard.js"></script>
+
 </body>
 </html>
