@@ -56,4 +56,53 @@ document.addEventListener("DOMContentLoaded", () => {
     .catch(error => {
       console.error("Failed to fetch data:", error);
     });
-});
+
+
+// Show Graph
+
+fetch(SHEET_URL)
+    .then(res => res.json())
+    .then(data => {
+      let cashInTotal = 0;
+      let cashOutTotal = 0;
+
+      data.forEach(entry => {
+        const amount = parseFloat(entry.amount) || 0;
+        if (entry.type.toLowerCase() === "cash in") cashInTotal += amount;
+        if (entry.type.toLowerCase() === "cash out") cashOutTotal += amount;
+      });
+
+      // Draw chart
+      const ctx = document.getElementById("transactionChart").getContext("2d");
+      new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: ["Cash In", "Cash Out"],
+          datasets: [{
+            label: "Total Amount",
+            data: [cashInTotal, cashOutTotal],
+            backgroundColor: ["#28a745", "#dc3545"] // green and red
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            title: {
+              display: true,
+              text: "Total Cash In vs Cash Out"
+            }
+          },
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    })
+    .catch(err => console.error("Error loading data:", err));
+  });
+
+
+
+
