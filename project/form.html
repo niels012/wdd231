@@ -15,14 +15,15 @@
     <h1>GCASH Transaction Form</h1>
     <form id="gcashForm">
       <input type="date" id="date" required />
-      <select id="type">
+      <select id="type" required>
+        <option value="" disabled selected>Select Transaction Type</option>
         <option value="Cash In">Cash In</option>
         <option value="Cash Out">Cash Out</option>
       </select>
-      <input type="text" id="mobile" placeholder="Mobile Number" required />
+      <input type="tel" id="mobile" pattern="[0-9]{11}" placeholder="Mobile Number" maxlength="11" required oninvalid="this.setCustomValidity('Please enter 11 digit number')" oninput="this.setCustomValidity('')"/>
       <input type="number" id="amount" placeholder="Amount" required />
-      <input type="number" id="fee" placeholder="Fee (if any)" />
-      <input type="text" id="receiver" placeholder="Receiver/Sender" required />
+      <p id="feeDisplay">Fee: ₱0</p>
+      <input type="text" id="receiver" placeholder="Receiver/Sender" pattern="[A-Za-z\s]+" required/>
       <input type="text" id="reference" placeholder="Reference Number" required />
       <button type="submit">Submit</button>
     </form>
